@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/list">
+    <fragment
+        android:id="@+id/list"
+        android:name="unpas.ac.mydb.fragment.List"
+        android:label="List Mahasiswa"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_list_to_add"
+            app:destination="@id/add"/>
+    </fragment>
+    <fragment
+        android:id="@+id/add"
+        android:name="unpas.ac.mydb.fragment.Add"
+        android:label="Add Mahasiswa"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_add_to_list"
+            app:destination="@id/list" />
+    </fragment>
+</navigation>
